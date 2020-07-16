@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "822949111900",
+    "firebase_url": "https://locus-optimus.firebaseio.com",
+    "project_id": "locus-optimus",
+    "storage_bucket": "locus-optimus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822949111900:android:aac1b75631078e29b1de99",
+        "android_client_info": {
+          "package_name": "dev.sametsahin.locus_optimus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822949111900-um4kvg6a93b6vsrnh8vt1e3llekfk48q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChCQ4XRN4Oft-mOEMZO4VxnTk8LxCRlQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822949111900-um4kvg6a93b6vsrnh8vt1e3llekfk48q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
