@@ -92,14 +92,14 @@ class _SignInScreenState extends State<SignInScreen> {
       resizeToAvoidBottomPadding: true,
       body: ListView(
         children: <Widget>[
+          SizedBox(height: screenHeight * 0.04),
           Center(
             child: Text(
               'Locus Optimus',
               style: TextStyle(fontSize: 36, color: Colors.white),
             ),
           ),
-          SizedBox(height: screenHeight * 0.01),
-          SizedBox(height: screenHeight * 0.05),
+          SizedBox(height: screenHeight * 0.23),
           Form(
             key: _formKey,
             child: Padding(
@@ -154,7 +154,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
           ),
-          SizedBox(height: screenHeight * 0.1),
+          SizedBox(height: screenHeight * 0.15),
           GestureDetector(
             child: Center(
               child: Text(
@@ -167,7 +167,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             onTap: () => pushSignUp(context),
           ),
-          SizedBox(height: screenHeight * 0.12),
+          SizedBox(height: screenHeight * 0.14),
           Padding(
             padding: EdgeInsets.only(
               left: screenWidth * 0.01,
@@ -180,20 +180,23 @@ class _SignInScreenState extends State<SignInScreen> {
                 padding: EdgeInsets.symmetric(
                   vertical: screenHeight * 0.015,
                 ),
-                color: AppColors.primaryColor,
+                color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(
-                    top: screenHeight * 0.01,
+                    top: screenHeight * 0.006,
                   ),
-                  child: Text(
-                    'Sign in',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 4.0),
+                    child: Text(
+                      'Sign in',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.primaryColor,
+                      ),
                     ),
                   ),
                 ),
