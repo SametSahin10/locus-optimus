@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:locus_optimus/core/config/app_colors.dart';
-import 'package:locus_optimus/core/config/assets.dart';
-import 'package:locus_optimus/core/use_case/use_case.dart';
-import 'package:locus_optimus/core/util/actions.dart';
-import 'package:locus_optimus/core/util/navigation.dart';
-import 'package:locus_optimus/core/util/validators.dart';
-import 'package:locus_optimus/features/auth/domain/use_cases/sign_up_use_case.dart';
 
+import '../../../../core/config/app_colors.dart';
+import '../../../../core/config/assets.dart';
+import '../../../../core/use_case/use_case.dart';
+import '../../../../core/util/actions.dart';
+import '../../../../core/util/navigation.dart';
+import '../../../../core/util/validators.dart';
 import '../../../../injection_container.dart';
+import '../../domain/use_cases/sign_up_use_case.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override

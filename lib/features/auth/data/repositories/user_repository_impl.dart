@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:locus_optimus/features/auth/data/data_sources/user_remote_data_source.dart';
-import 'package:locus_optimus/features/auth/domain/repositories/user_repository.dart';
+
+import '../../domain/repositories/user_repository.dart';
+import '../data_sources/user_remote_data_source.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final UserRemoteDataSource remoteDataSource;

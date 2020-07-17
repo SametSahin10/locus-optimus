@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:locus_optimus/core/use_case/use_case.dart';
-import 'package:locus_optimus/features/auth/domain/repositories/user_repository.dart';
+
+import '../../../../core/use_case/use_case.dart';
+import '../repositories/user_repository.dart';
 
 class SignUpUseCase implements UseCase<FirebaseUser, FirebaseUserParams> {
   final UserRepository repository;

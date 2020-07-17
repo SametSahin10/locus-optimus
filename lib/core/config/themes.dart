@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:locus_optimus/core/config/app_colors.dart';
+
+import 'app_colors.dart';
 
 lightTheme(BuildContext context) {
   return ThemeData(

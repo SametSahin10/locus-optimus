@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:locus_optimus/core/config/app_colors.dart';
 import 'package:lottie/lottie.dart';
+
+import '../config/app_colors.dart';
 
 void showProgressDialog({
   @required BuildContext context,

@@ -1,5 +1,6 @@
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:locus_optimus/core/config/constants.dart';
+
+import '../config/constants.dart';
 
 final emailValidator = MultiValidator([
     RequiredValidator(errorText: 'email is required'),

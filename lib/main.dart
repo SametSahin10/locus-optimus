@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:locus_optimus/core/config/app_colors.dart';
-import 'package:locus_optimus/core/config/themes.dart';
-import 'package:locus_optimus/features/auth/presentation/screens/sign_in_screen.dart';
+
+import 'core/config/app_colors.dart';
+import 'core/config/themes.dart';
+import 'features/auth/presentation/screens/sign_in_screen.dart';
 import 'injection_container.dart' as di;
 
 void main() {
