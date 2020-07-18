@@ -220,12 +220,23 @@ class _SignInScreenState extends State<SignInScreen> {
       });
       _formKey.currentState.save();
       final signInUseCase = sl<SignInUseCase>();
-      final firebaseUser = await signInUseCase.call(
+      final user = await signInUseCase.call(
         FirebaseUserParams(
           email: _email.trim(),
           password: _password.trim(),
         ),
       );
+      if (user != null) {
+        print("Signed in succesfully");
+      } else {
+        print("Signin in failed");
+        // Hide progressDialog
+        Navigator.of(context).pop();
+        showSnackBar(
+          context: context,
+          message: "Signing in failed. Check your email and password.",
+        );
+      }
     }
   }
 }

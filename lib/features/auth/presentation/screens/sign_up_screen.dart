@@ -20,7 +20,6 @@ class _SignInScreenState extends State<SignUpScreen> {
 
   String _email;
   String _password;
-  String _phoneNumber;
   bool _termsChecked = false;
 
   bool _signingUp = false;
@@ -376,7 +375,7 @@ class _SignInScreenState extends State<SignUpScreen> {
                           ),
                         ),
                       ),
-                      onPressed: () => _signUp(context),
+                      onPressed: () => _handleSignUp(context),
                     ),
                   ),
                 ),
@@ -388,23 +387,8 @@ class _SignInScreenState extends State<SignUpScreen> {
     );
   }
 
-  _signUp(BuildContext context) async {
+  _handleSignUp(BuildContext context) async {
     if (_formKey.currentState.validate()) {
-      if (!_termsChecked) {
-        Scaffold.of(context).showSnackBar(SnackBar(
-          backgroundColor: Colors.white,
-          content: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'You must agree to our terms and conditions',
-                style: TextStyle(color: Color(0xFF97D5E5), fontSize: 16),
-              )
-            ],
-          ),
-        ));
-        return;
-      }
       setState(() {
         showAlertDialog(
           context: context,
@@ -415,10 +399,21 @@ class _SignInScreenState extends State<SignUpScreen> {
       });
       _formKey.currentState.save();
       final signUpUseCase = sl<SignUpUseCase>();
-      signUpUseCase.call(FirebaseUserParams(
+      final user = await signUpUseCase.call(FirebaseUserParams(
         email: _email.trim(),
         password: _password.trim(),
       ));
+      if (user != null) {
+        print("Signed up successfully");
+      } else {
+        // Hide alert dialog
+        Navigator.of(context).pop();
+        print("Sigingin up failed");
+        showSnackBar(
+          context: context,
+          message: "Signin up failed. Try using a different email.",
+        );
+      }
     }
   }
 }
