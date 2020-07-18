@@ -36,24 +36,19 @@ void showProgressDialog({
 }
 
 void showSnackBar({
-  @required  BuildContext context,
+  @required BuildContext context,
   @required String message,
 }) {
   Scaffold.of(context).showSnackBar(
     SnackBar(
-      backgroundColor: Colors.white,
-      content: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            message,
-            style: TextStyle(
-              color: AppColors.primaryColor,
-              fontSize: 18,
-              fontFamily: "PatrickHand",
-            ),
-          )
-        ],
+      backgroundColor: AppColors.secondaryColor,
+      content: Text(
+        message,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+          fontFamily: "PatrickHand",
+        ),
       ),
     ),
   );
